@@ -1,5 +1,6 @@
 import Button from "./Button";
 import { useHistory, withRouter } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
   const history = useHistory();
@@ -11,6 +12,13 @@ function Navbar() {
         }}
       >
         Add new picture
+      </Button>
+      <Button
+        onClick={() => {
+          history.push("/");
+        }}
+      >
+        Home
       </Button>
       <p>Shopify Challenge</p>
     </div>
