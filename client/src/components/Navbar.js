@@ -1,10 +1,19 @@
-// import logo from "./logo.svg";
-// import "./App.css";
+import Button from "./Button";
+import { useHistory, withRouter } from "react-router-dom";
 
-export default function Navbar() {
+function Navbar() {
+  const history = useHistory();
   return (
     <div className="Navbar">
-      <p>Shopify challenge</p>
+      <Button
+        onClick={() => {
+          history.push("/new");
+        }}
+      >
+        Add new picture
+      </Button>
+      <p>Shopify Challenge</p>
     </div>
   );
 }
+export default withRouter(Navbar);
