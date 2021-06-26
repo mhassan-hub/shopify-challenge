@@ -6,21 +6,32 @@ function Navbar() {
   const history = useHistory();
   return (
     <div className="Navbar">
-      <Button
-        onClick={() => {
-          history.push("/new");
-        }}
-      >
-        Add new picture
-      </Button>
-      <Button
-        onClick={() => {
-          history.push("/");
-        }}
-      >
-        Home
-      </Button>
-      <p>Shopify Challenge</p>
+      <div className="navbar-left">
+        <p>Shopify Challenge</p>
+      </div>
+      <div className="navbar-right">
+        <Button
+          onClick={() => {
+            history.push("/");
+          }}
+        >
+          Home
+        </Button>
+        <Button
+          onClick={() => {
+            history.push("/new");
+          }}
+        >
+          Add new picture
+        </Button>
+        <Button
+          onClick={() => {
+            history.push("/profile");
+          }}
+        >
+          Profile
+        </Button>
+      </div>
     </div>
   );
 }
